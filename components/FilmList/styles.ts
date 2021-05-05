@@ -14,6 +14,11 @@ const FilmListContainer = styled.div`
     text-align: center;
     padding: 0 0 30px;
     user-select: none;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      margin: 0 0 10px;
+    }
   }
 `;
 
@@ -38,6 +43,12 @@ const FilmCard = styled.div`
   transition: background-color 0.5s;
   cursor: pointer;
 
+  @media (max-width: 380px) {
+    padding: 20px;
+    width: 280px;
+    height: 140px;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.blue};
   }
@@ -50,7 +61,12 @@ const EpisodeName = styled.div`
 const FilmTitle = styled.div`
   font-weight: 700;
   font-size: 28px;
-  width: ${(props: ICardProps) => (props.episode ?? 1 % 2 !== 0 ? '200px' : '160px')};
+  width: ${(props: ICardProps) => (props.episode! % 2 !== 0 ? '200px' : '160px')};
+
+  @media (max-width: 380px) {
+    font-size: 24px;
+    width: ${(props: ICardProps) => (props.episode! % 2 !== 0 ? '180px' : '140px')};
+  }
 `;
 
 const Button = styled.div`
@@ -62,6 +78,10 @@ const Button = styled.div`
   background-color: ${(props: ICardProps) => (props.hover !== props.episode ? 'transparent' : 'white')};
   color: ${(props: ICardProps) => (props.hover !== props.episode ? 'white' : ({ theme }) => theme.colors.blue)};
   transition: color 0.5s, background-color 0.5s;
+
+  @media (max-width: 380px) {
+    padding: 10px 30px;
+  }
 `;
 
 const romanPosition = (value: number): string => {
@@ -89,6 +109,10 @@ const EpisodeNumber = styled.div`
     right: ${(props: ICardProps) => romanPosition(props.episode ?? 1)};
     top: 0px;
     transition: color 0.5s;
+
+    @media (max-width: 380px) {
+      font-size: 160px;
+    }
   `;
 
 export {

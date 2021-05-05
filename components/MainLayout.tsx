@@ -15,7 +15,7 @@ export default function MainLayout({ children }: PropsWithChildren<unknown>): Re
       <MainHeader>
         <Link href="/">
           <a>
-            <Image src="/icons/star-wars-logo.svg" alt="Star Wars Logo" width={160} height={150} />
+            <Image src="/icons/star-wars-logo.svg" alt="Star Wars Logo" width={160} height={100} />
           </a>
         </Link>
       </MainHeader>

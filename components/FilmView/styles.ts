@@ -5,17 +5,32 @@ const ViewContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const InfoWrapper = styled.div`
   width: calc(100% - 400px);
   padding-left: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 30px 20px;
+  }
 `;
 
 const EpisodeNumber = styled.div`
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
 `;
 
 const FilmTitle = styled.div`
@@ -23,6 +38,12 @@ const FilmTitle = styled.div`
   font-weight: 700;
   line-height: 72px;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
 `;
 
 const DataWrapper = styled.div`
@@ -30,6 +51,16 @@ const DataWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
+
+  @media (max-width: 768px) {
+    padding: 12px 0;
+    flex-wrap: wrap;
+
+    div {
+      margin-bottom: 6px;
+      width: 100% !important;
+    }
+  }
 `;
 
 const DataPrompt = styled.div`
@@ -51,6 +82,12 @@ const TextCrawl = styled.div`
   line-height: 32px;
   overflow-x: hidden;
   color: ${({ theme }) => theme.colors.lightGray};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+  }
 `;
 
 const loading = keyframes`
