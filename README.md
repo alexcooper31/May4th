@@ -12,4 +12,4 @@ To build and start the project locally, run `yarn dev` or `npm start dev` afterw
  
 For this test, Star Wars themed, was coincidentally made on May 4th of 2021.
 
-### *<span style="color: dodgerblue;text-decoration: underline;text-decoration-color: dodgerblue;">**may the Force be with you all!**</span>*
+### *<span style="color: dodgerblue;text-decoration: underline;text-decoration-color: dodgerblue;">**May the Force be with you all!**</span>*
